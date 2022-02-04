@@ -1,0 +1,11 @@
+.card-image-50 {
+    height: 50%;
+}
+
+.card-title {
+    font-size: 40px;
+    color: rgb(90, 86, 61);
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+}
