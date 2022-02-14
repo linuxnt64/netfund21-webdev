@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
+
+/* 
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+*/
+
+body {
+    background-color: #F7F7F7;
+}
+
+.circle {
+    height: 75px;
+    width: 75px;
+    background-color: #25e6c8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+a {
+    color:#2baaec;
+}
+a:hover {
+    color: #25e6c8;
+}
+
+
+.border-bottom {
+    border-color: #ececec !important;
+}
+
+/* navbar-top */
+#navbar-top {
+    height: 50px;
+    font-size: 0.8rem;
+    background-color: #fff;
+}
+
+#navbar-top .working-hours i {
+    font-size: 1.2rem;
+    color: #2baaec;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+#navbar-top .social-media-links i {
+    font-size: 1rem;
+    margin-left: 1.5rem;
+}
+
+/* navbar */
+#navbar .navbar-nav .nav-link {
+    color:#363636;
+    font-size: 1.125rem;
+
+}
+#navbar .navbar-nav .nav-link:hover {
+    color:#25e6c8;
+}
+
+/* services */
+#services {
+    background-color: #F7F7F7;
+}
+
+.section-title {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 2rem;
+}
+
+.section-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.section-title .border-bottom {
+    border-bottom: 4px solid #25E6C8 !important;
+}
+
+
+
+
+
+
+@media (min-width: 992px) {
+    #navbar {
+        height: 150px;
+    }
+    #navbar .navbar-nav .nav-link {
+        font-size: 1.125rem;    
+    }
+
+    .section-title {
+        padding-top: 150px;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1700px;
+    }
+}
