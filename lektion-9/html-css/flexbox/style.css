@@ -1,0 +1,17 @@
+/* flexbox */
+#box-1 {
+    background-color: aquamarine;
+}
+
+.box {
+    padding: 2rem;
+    background-color: bisque;
+    border: 1px solid black;
+}
+
+.flex {
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

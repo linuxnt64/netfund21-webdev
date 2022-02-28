@@ -1,0 +1,55 @@
+/* css-grid */
+nav {
+    grid-area: n;
+}
+aside {
+    display: none;
+    grid-area: a;
+}
+main {
+    grid-area: m;
+}
+footer {
+    grid-area: f
+}
+
+
+.css-grid {
+    display: grid;
+    grid-template-areas:    "n"
+                            "a"
+                            "m"
+                            "f";
+}
+
+@media (min-width: 768px) {
+    .css-grid {
+        grid-template-areas:    "f f"
+                                "n n"
+                                "m m"
+                                "a a";       
+    }
+
+    aside {
+        display: block;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .css-grid {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:    "n n"
+                                "a m"
+                                "f f";       
+    }
+
+    aside {
+        display: block;
+    }
+}
+
+
+
+
+

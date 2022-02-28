@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Poppins:wght@100;400;700&family=Roboto:wght@400;700&display=swap');
+/* 
+    font-family: 'Karla', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+*/
+
+body {
+    font-family: 'Karla', sans-serif;
+    color: #002249;
+}
+
+a {
+    color: #6C90B9;
+    text-decoration: none;
+}
+a:hover {
+    color: #5e6e80;
+    text-decoration: underline;
+}
+
+.btn {
+    border-radius: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2.55rem;
+    padding-right: 2.55rem;
+}
+
+.btn-main {
+    color: #fff;
+    background-color: #006DE8;
+    border-color: #006DE8;
+  }
+
+.btn-main:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-check:focus + .btn-main, .btn-main:focus {
+    color: #fff;
+    background-color: #1c55aa;
+    border-color: #1c55aa;
+    box-shadow: none;
+}
+
+.nav-link {
+    color: #6C90B9;
+   }
+
+  .nav-link:hover, .nav-link:focus {
+    color: #5e6e80;
+  }
+
+
+
+
+.bg-blue-gradient {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(169,199,236,1) 100%);
+}
+
+
+.navbar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+    @media (min-width: 1920px) {
+        .navbar-grid {
+            grid-template-columns: 274px 1fr;
+        }
+    }
+
+
+
+    .navbar-grid .branding {
+        grid-column: 1;
+        background-color: #ffffff;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .navbar-grid .branding h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        color: #002249;
+    }
+    .navbar-grid .branding p {
+        font-size: 14px;
+        color: #6C90B9;
+        line-height: 0.5;
+    }
+
+
+    .navbar-grid .navbars {
+        grid-column: 2;
+        margin-left: 6.5rem;
+    }
+
+        .navbar-grid .navbars .social {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #99C2F6;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+            .navbar-grid .navbars .social .nav-links a {
+                margin-left: 1rem;
+            }
+
+        .navbar-grid .navbars .menu {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding-top: 16px;
+        }  
+        
+            .navbar-grid .navbars .menu a {
+                margin-left: 1.9rem;
+            }
+
+
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+    .showcase .showcase-body {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+        .showcase .showcase-body .showcase-text {
+            margin-left: 2.5rem;
+        }
+
+            .showcase .showcase-body .showcase-text > p {
+                color: #69A1BB;
+                font-size: 24px;
+            }
+            .showcase .showcase-body .showcase-text > h1 {
+                color: #002249;
+                font-size: 80px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .showcase .showcase-body .showcase-text > .showcase-links {
+                display: flex;
+            }
+
+                .showcase .showcase-body .showcase-text > .showcase-links > .showcase-link {
+                    display: flex;
+                    align-items: center;
+                    font-size: 24px;
+                    margin-right: 3rem;
+                }
+                    .showcase .showcase-body .showcase-text > .showcase-links > .showcase-link > span {
+                        margin-top: -1rem;
+                    }         
+
+    .showcase .showcase-img {
+        flex: 1;
+        display: flex;
+        justify-content: end;
+    }
+
+
+
+
+
+
+
+
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1350px;
+    }
+}
