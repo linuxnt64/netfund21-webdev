@@ -1,0 +1,42 @@
+﻿@model ContactForm
+
+<div class="bg-whiteblue">
+    <div class="container">
+        <div id="contactform-section">
+            <div class="column">
+                <div class="section-title">
+                    Get In Touch
+                    <div class="h-line"></div>
+                </div>
+                <h1>Estimate for your projects.</h1>
+                <form asp-action="Index" id="contactform">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="mb-3">
+                        <input asp-for="Name" class="form-control" type="text" placeholder="Enter your name">
+                        <small><span asp-validation-for="Name" class="text-danger"></span></small>
+                    </div>
+                    <div class="mb-3">
+                        <input asp-for="Email" class="form-control" type="text" placeholder="Enter your email">
+                        <small><span asp-validation-for="Email" class="text-danger"></span></small>
+                    </div>
+                    <div class="mb-3">
+                        <textarea asp-for="Message" class="form-control" cols="30" rows="10" placeholder="Enter your message" no-resize></textarea>
+                        <small><span asp-validation-for="Message" class="text-danger"></span></small>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-main">Submit Now</button>
+                </form>
+            </div>
+            <div class="column">
+                <img class="" src="images/square-box.svg" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

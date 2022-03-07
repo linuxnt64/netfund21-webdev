@@ -1,0 +1,31 @@
+﻿@model ContactForm
+
+<div class="container">
+    <div id="bookmeeting-section">
+        <div class="text-center">
+            <div class="title">
+                <h1>Book a Meeting</h1>
+                <p>Does any industry face a more complex audience journey and marketing sales process than B2B technology.</p>
+            </div>
+            <form asp-action="Index">
+                <div class="row g-4">
+                    <div class="col-6">
+                        <input asp-for="Name" type="text" class="form-control" placeholder="Enter your name">
+                        <small><span asp-validation-for="Name" class="text-danger"></span></small>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Email" type="text" class="form-control" placeholder="Enter your email">
+                        <small><span asp-validation-for="Email" class="text-danger"></span></small>
+                    </div>
+                    <div class="col-12">
+                        <textarea asp-for="Message" class="form-control mb-3" cols="30" rows="5" placeholder="Enter your message" no-resize></textarea>
+                        <small><span asp-validation-for="Message" class="text-danger"></span></small>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-main">Book a Meeting Now</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
