@@ -1,0 +1,35 @@
+﻿<ul class="navbar-nav">
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        @if(User.IsInRole("admin"))
+        {
+            <li class="nav-item">
+                <a class="nav-link btn btn-link text-dark" asp-controller="Home" asp-action="AdminCenter">Admin Center</a>
+            </li>       
+
+            <li class="nav-item">
+                <a class="nav-link btn btn-link text-dark" asp-controller="Home" asp-action="UserCenter">User Center</a>
+            </li>   
+        }
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="Profile">Inloggad som @User.FindFirst("DisplayName")?.Value</a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link btn btn-link text-dark" asp-controller="Auth" asp-action="SignOut">Logga ut</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Auth" asp-action="SignIn">Logga in</a>
+        </li>     
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Auth" asp-action="SignUp">Bli medlem</a>
+        </li>
+    }
+
+</ul>

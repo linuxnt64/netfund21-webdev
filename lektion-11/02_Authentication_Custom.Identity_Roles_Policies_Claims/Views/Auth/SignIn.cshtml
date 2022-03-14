@@ -1,0 +1,38 @@
+﻿@model _02_Authentication_Custom.Identity_Roles_Policies_Claims.Models.SignInForm
+
+
+
+@{
+    ViewData["Title"] = "Logga in";
+}
+
+
+
+<div class="d-flex justify-content-center">
+    <div>
+        <h4>@ViewData["Title"]</h4>
+        <form asp-action="SignIn" asp-route-returnUrl="@Model.ReturnUrl" class="row g-3 mt-3">
+            <div class="col-12">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+                <div class="col-12">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="col-12 mt-3 text-danger">
+                @ViewData["Error"]
+            </div>
+            <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-success">@ViewData["Title"]</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
