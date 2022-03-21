@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using _01_Autentication_IndividualAccounts.Services
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject IProfileManager ProfileManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    @if(User.IsInRole("admin"))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark">Admin Center</a>
+        </li>
+    }
+
+    <li class="nav-item">
+        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">CLAIMS: @User.FindFirst("DisplayName")?.Value</a>
+    </li>
+    <li class="nav-item">
+        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">PM: @await ProfileManager.GetDisplayNameAsync(User.FindFirst("UserId")?.Value ?? "")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-link text-dark" asp-controller="Auth" asp-action="Logout">Logga ut</a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Auth" asp-action="Register">Registrera</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Auth" asp-action="Login">Logga in</a>
+    </li>
+}
+</ul>

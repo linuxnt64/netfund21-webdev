@@ -1,0 +1,40 @@
+﻿@model _01_Autentication_IndividualAccounts.Models.Forms.LoginForm
+
+@{
+    ViewData["Title"] = "Logga in";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-center">
+        <div class="col-5">
+            <form asp-action="Login" >
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" aria-describedby="emailHelp">
+                    <span asp-validation-for="Email" class="form-text text-danger"></span>
+                    <div id="emailHelp" class="form-text">Vi kommer inte dela med oss av detta till någon</div>      
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" aria-describedby="passwordHelp">
+                    <span asp-validation-for="Password" class="form-text text-danger"></span>   
+                </div>
+                <div class="form-text text-center text-danger mb-3">
+                    @ViewData["ErrorMessage"]
+                </div>
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary">@ViewData["Title"]</button>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <a asp-controller="Auth" asp-action="Forgot">Glömt lösenordet?</a>
+                    <a asp-controller="Auth" asp-action="Register">Bli medlem idag!</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
